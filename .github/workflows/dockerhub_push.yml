@@ -1,4 +1,4 @@
-name: CI/CD - Plants Diseases
+name: CI/CD - DockerHub
 
 on:
   push:
