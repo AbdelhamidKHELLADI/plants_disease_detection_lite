@@ -3,7 +3,9 @@ import numpy as np
 from PIL import Image
 from ai_edge_litert.interpreter import Interpreter
 import time
+import os
 
+os.environ["STREAMLIT_CACHE_DIR"] = "/tmp/streamlit-cache"
 
 st.title("🌿 MobileNet TFLite Image Classifier")
 st.write("Upload an image to test your quantized MobileNet model.")
