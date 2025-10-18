@@ -13,7 +13,7 @@ This project demonstrates real-world model optimization, containerized deploymen
 - ✅ **Fine-tuned MobileNetV3-Small** for accurate plant disease recognition  
 - ⚡ **TFLite quantization (INT8)** for ultra-fast inference  
 - 🌐 **Streamlit-based web interface** for image upload and prediction  
-- 🐳 **Dockerized environment** for reproducible builds  
+- 📦 **Dockerized environment** for reproducible builds  
 - 🤗 **CI/CD pipeline** that automatically pushes to:
   - Docker Hub  
   - Hugging Face Models & Spaces  
@@ -87,15 +87,6 @@ This project includes a full CI/CD pipeline that automatically:
 
 * Deploys the Streamlit app to Hugging Face Spaces
 
-## Required Secrets
-Add these in
-GitHub → Settings → Secrets → Actions:
-
-**Secret** :	Description
-**DOCKERHUB_USERNAME**:	Your Docker Hub username
-**DOCKERHUB_TOKEN** :	Docker Hub access token
-**HUGGINGFACE_TOKEN** :	Hugging Face access token with write permission
-
 📈 Results
 Metric | Keras Model | TFLite INT8 |
 |-----|------------|-------------|
@@ -119,10 +110,13 @@ Try it live on Hugging Face Spaces 👇
 * 📷 Enable live camera inference for instant in-field diagnosis
 
 ---
-🪴 License
+## 🪴 License
 This project is released under the MIT License.
 You are free to use, modify, and distribute it with attribution.
 
-⭐ If you like this project, give it a star!
+## Refs:
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+## ⭐ If you like this project, give it a star!
 Your feedback helps improve open-source AI for agriculture 🌱
 
