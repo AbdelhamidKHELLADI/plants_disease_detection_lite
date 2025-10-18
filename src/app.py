@@ -46,20 +46,20 @@ if uploaded_file is not None:
     input_data = np.expand_dims(img, axis=0).astype(np.float32)
     
 
-    start = time.time()
-    interpreter.set_tensor(input_details[0]['index'], input_data)
-    interpreter.invoke()
-    preds = interpreter.get_tensor(output_details[0]['index'])[0]
-    inference_time = (time.time() - start) * 1000
+    if st.button("🔍 Predict"):
+        with st.spinner("Analyzing image..."):
 
+            start = time.time()
+            interpreter.set_tensor(input_details[0]['index'], input_data)
+            interpreter.invoke()
+            preds = interpreter.get_tensor(output_details[0]['index'])[0]
+            inference_time = (time.time() - start) * 1000
 
-    top_k = preds.argsort()[-2:][::-1]
-    st.markdown("### 🔍 Predictions:")
-    for i in top_k:
-        label = labels[i] if labels else f"Class {i}"
-        st.write(f"**{label}** — {preds[i]*100:.2f}%")
-        if preds[i]==1:
-            break
-            
-
-    st.write(f" Inference Time: {inference_time:.2f} ms")
+            top_k = preds.argsort()[-3:][::-1]
+            st.markdown("### 🌱 Predictions:")
+            for i in top_k:
+                label = labels[i] if labels else f"Class {i}"
+                st.write(f"**{label}** — {preds[i] * 100:.2f}%")
+                if preds[i]==1:
+                    break
+            st.info(f"⚡ Inference Time: {inference_time:.2f} ms")
