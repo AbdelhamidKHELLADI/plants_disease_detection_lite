@@ -115,7 +115,7 @@ This project is released under the MIT License.
 You are free to use, modify, and distribute it with attribution.
 
 ## Refs:
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Check out the configuration reference at [https://huggingface.co/docs/hub/spaces-config-reference](https://huggingface.co/docs/hub/spaces-config-reference)
 
 ## ⭐ If you like this project, give it a star!
 Your feedback helps improve open-source AI for agriculture 🌱
