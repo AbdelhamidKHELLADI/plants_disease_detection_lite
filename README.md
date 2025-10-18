@@ -1,6 +1,16 @@
+---
+title: "🌿 Plant Diseases Classifier"
+emoji: "🌱"
+colorFrom: "green"
+colorTo: "blue"
+sdk: "streamlit"
+app_file: "streamlit_app.py"
+---
+
+
 # 🌿 Plant Diseases Classifier (MobileNetV3 + TFLite)
 
-[![Hugging Face Space](https://img.shields.io/badge/🚀-HuggingFace_Space-blue.svg)](https://huggingface.co/spaces/<your-username>/plants-diseases-lite-app)
+[![Hugging Face Space](https://img.shields.io/badge/🚀-HuggingFace_Space-blue.svg)](https://huggingface.co/spaces/khhamid/plants-diseases-detection)
 
 
 An optimized **plant disease detection** web app built using **TensorFlow**, **MobileNetV3**, and **Streamlit**, with **quantized TFLite deployment** for efficient inference on the web, cloud, and edge devices.  
