@@ -1,4 +1,5 @@
 tensorflow
+streamlit
 keras
 ai-edge-litert
 matplotlib
