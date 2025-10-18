@@ -1,11 +1,16 @@
+import os
+os.environ["STREAMLIT_CACHE_DIR"] = "/tmp/streamlit-cache"
+os.environ["STREAMLIT_CONFIG_DIR"] = "/tmp/streamlit-config"
+
 import streamlit as st
-import numpy as np
 from PIL import Image
+import numpy as np
 from ai_edge_litert.interpreter import Interpreter
 import time
-import os
 
-os.environ["STREAMLIT_CACHE_DIR"] = "/tmp/streamlit-cache"
+os.makedirs("/tmp/streamlit-cache", exist_ok=True)
+os.makedirs("/tmp/streamlit-config", exist_ok=True)
+
 
 st.title("🌿 MobileNet TFLite Image Classifier")
 st.write("Upload an image to test your quantized MobileNet model.")
