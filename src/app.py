@@ -40,14 +40,14 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
     st.image(image, caption="Uploaded Image", width="stretch")
 
-    img = image.resize((224, 224))
-    img = np.array(img)
-    input_data = preprocess(img)
-    input_data = np.expand_dims(img, axis=0).astype(np.float32)
-    
+  
 
     if st.button("🔍 Predict"):
         with st.spinner("Analyzing image..."):
+            img = image.resize((224, 224))
+            img = np.array(img)
+            input_data = preprocess(img)
+            input_data = np.expand_dims(img, axis=0).astype(np.float32)
 
             start = time.time()
             interpreter.set_tensor(input_details[0]['index'], input_data)
