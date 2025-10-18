@@ -53,7 +53,7 @@ jobs:
         api = HfApi()
         api.upload_folder(
             folder_path=".",
-            repo_id="${{ secrets.HF_USERNAME }}/plants-diseases-detaction",
+            repo_id="${{ secrets.HF_USERNAME }}/plants-diseases-detection",
             repo_type="space",
             token="${{ secrets.HF_TOKEN }}"
         )
